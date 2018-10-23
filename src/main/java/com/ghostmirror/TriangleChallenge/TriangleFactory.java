@@ -20,7 +20,7 @@ public class TriangleFactory {
     public static Triangle createTriangle(BigDecimal a, BigDecimal b, BigDecimal c) throws IllegalArgumentException {
         Triangle t = new Triangle(a, b, c);
         if(t.getC().compareTo(BigDecimal.ZERO) < 0) {
-            throw new IllegalArgumentException("Negative side size");
+            throw new IllegalArgumentException("Negative or zero side size");
         }
         if(t.getA().compareTo(t.getB().add(t.getC())) >= 0) {
             throw new IllegalArgumentException("Not closed path");

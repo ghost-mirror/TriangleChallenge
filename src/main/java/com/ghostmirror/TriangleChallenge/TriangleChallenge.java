@@ -6,7 +6,7 @@ public class TriangleChallenge {
             help();
             return;
         }
-        if(args.length < 3 || args.length < 4) {
+        if(args.length < 3 || args.length > 4) {
             System.out.println("Wrong arguments. See Help.");
             help();
             return;
